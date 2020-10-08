@@ -1,10 +1,12 @@
 import express from 'express'
 import morgan from 'morgan'
 import pkg from '../package.json'
+import customersRoutes from './routes/customers.routes.js'
+import authRoutes from './routes/auth.routes.js'
 
 const app = express()
 
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 5000)
 app.set('pkg', pkg)
 app.use(morgan('dev'))
 app.use(express.json())
